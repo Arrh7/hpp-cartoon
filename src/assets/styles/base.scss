@@ -49,5 +49,7 @@ table {
 
 // =================
 html, body, #app {
+	max-width: 540PX;
 	height: 100%;
+	margin: auto;
 }
