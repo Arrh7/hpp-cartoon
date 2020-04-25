@@ -48,31 +48,14 @@ export default {
     getBanner () {
       getBanner()
         .then(res => {
-          if (res.code === 200) {
-            this.bannerList = res.info
-          } else {
-            alert(res.code_msg)
-          }
-        })
-        .catch(err => {
-          console.log(err)
-          alert('网络异常，请稍后重试')
+          this.bannerList = res.info
         })
     },
     getIndexRecommend () {
       getIndexRecommend()
         .then(res => {
-          console.log(res)
-
-          if (res.code === 200) {
-            this.recommendList = res.info
-          } else {
-            alert(res.code_msg)
-          }
-        })
-        .catch(err => {
-          console.log(err)
-          alert('网络异常，请稍后重试')
+          // console.log(res)
+          this.recommendList = res.info
         })
     }
   },

@@ -1,20 +1,29 @@
 <template>
   <header class="index-header">
-      <a href="mine.html?cpid=0">
+
         <div class="header-user">
-          <div class="user-btn"></div>
+          <div class="user-btn" @click="goBack"></div>
         </div>
-      </a>
+
       <div class="header-logo"></div>
-      <a href="search.html?cpid=0">
-        <div class="header-search"></div>
-      </a>
+
+        <div class="header-search" @click="goSearch1"></div>
+
     </header>
 </template>
 
 <script>
 export default {
-  name: 'IndexHeader'
+  name: 'IndexHeader',
+  // 编程式导航
+  methods: {
+    goBack () {
+      this.$router.back()
+    },
+    goSearch1 () {
+      this.$router.push('/search')
+    }
+  }
 }
 </script>
 

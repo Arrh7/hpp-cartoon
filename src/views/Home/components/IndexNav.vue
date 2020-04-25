@@ -1,30 +1,30 @@
 <template>
    <!-- 导航栏 -->
       <nav class="index-nav">
-        <a href="classify.html?cpid=0">
+        <router-link to="/classify">
           <div class="nav-item">
             <i class="iconfont icon-icon_addmessage"></i>
             <p class="nav-text font-24">分类</p>
           </div>
-        </a>
-        <a href="ranking.html?cpid=0">
+        </router-link>
+        <router-link to="/ranking">
           <div class="nav-item">
             <i class="iconfont icon-icon_addresslist"></i>
             <p class="nav-text font-24">排行</p>
           </div>
-        </a>
-        <a href="vip.html?cpid=0">
+        </router-link>
+        <router-link to="/vip">
           <div class="nav-item">
             <i class="iconfont icon-icon_addressbook"></i>
             <p class="nav-text font-24">VIP专区</p>
           </div>
-        </a>
-        <a href="history.html?cpid=0">
+        </router-link>
+        <router-link to="/hello/history">
           <div class="nav-item">
             <i class="iconfont icon-icon_at"></i>
             <p class="nav-text font-24">历史</p>
           </div>
-        </a>
+        </router-link>
       </nav>
 </template>
 
