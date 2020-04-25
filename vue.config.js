@@ -13,6 +13,13 @@ module.exports = {
           '^/api': ''
         }
       },
+      '/maizuo': {
+        target: 'https://m.maizuo.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/maizuo': ''
+        }
+      },
       '/migu': {
         target: 'http://movie.miguvideo.com',
         changeOrigin: true,

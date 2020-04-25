@@ -1,6 +1,6 @@
 <template>
   <div class="page-classify">
-
+     <router-link to="/city">当前城市：{{curCityName}}</router-link>
     <normal-header title="分类"></normal-header>
 
     <header-type :types="types" @click="onTypeChange"></header-type>
@@ -17,6 +17,7 @@ import NormalHeader from '@/components/NormalHeader'
 import HeaderType from '@/components/HeaderType'
 import CartoonList from '@/components/CartoonList'
 import { getTypes, getTypeList } from '@/api/cartoon'
+import { mapGetters } from 'vuex'
 import { unformat } from '@/utils/apiHeader'
 
 export default {
@@ -35,6 +36,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters('city', ['curCityName']),
     cartoonList () {
       // map数组方法
       return this.classifyList.map(item => {
